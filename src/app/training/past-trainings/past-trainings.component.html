@@ -10,7 +10,7 @@
       Date
     </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      {{element.date | date}}
+      {{element.date.toDate() | date}}
     </mat-cell>
   </ng-container>
 

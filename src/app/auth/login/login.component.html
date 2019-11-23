@@ -28,11 +28,13 @@
       <mat-error>Must to be at least 6 characters.</mat-error>
     </mat-form-field>
     <button
+      *ngIf="!(isLoading$ | async)"
       [disabled]="loginForm.invalid"
       mat-raised-button color="primary"
       (click)="onSubmit()"
     >
       Submit
     </button>
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
   </form>
 </section>
